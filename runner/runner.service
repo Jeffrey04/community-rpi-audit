@@ -4,7 +4,8 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=/root/community-rpi-audit/runner/runner.sh
+WorkingDirectory=/root/community-rpi-audit/runner
+ExecStart=/bin/bash /root/community-rpi-audit/runner/runner.sh
 
 [Install]
 WantedBy=multi-user.target
