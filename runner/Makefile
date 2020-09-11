@@ -4,7 +4,7 @@ run: miniooni
 	/usr/bin/bash runner.sh
 
 setup: miniooni
-	mv runner.service /etc/systemd/system/ \
+	cp runner.service /etc/systemd/system/ \
 		&& systemctl enable runner.service
 
 miniooni:
