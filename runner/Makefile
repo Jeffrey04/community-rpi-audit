@@ -5,7 +5,7 @@ run: miniooni
 
 setup: miniooni
 	mv runner.service /etc/systemd/system/ \
-		&& systemctl enable autossh.service
+		&& systemctl enable runner.service
 
 miniooni:
 	git clone --depth=1 https://github.com/ooni/probe-engine \
